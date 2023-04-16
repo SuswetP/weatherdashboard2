@@ -1,7 +1,14 @@
 {{page-title "WeatherDashboard"}}
 
 {{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
+<header class="bg-blue-500 p-4 text-white">
+  <h1 class="text-xl font-bold">Weather Dashboard</h1>
+</header>
+
+<main class="p-4">
+  {{outlet}}
+</main>
+
 {{!-- Feel free to remove this! --}}
 
 {{outlet}}

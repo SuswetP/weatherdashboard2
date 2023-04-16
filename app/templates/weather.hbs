@@ -1,0 +1,20 @@
+{{page-title "Weather"}}
+{{#if this.weatherData}}
+  <div class="mt-10">
+    <h2 class="text-2xl font-bold">{{this.weatherData.cityName}}</h2>
+    <div class="flex items-center">
+      <img src="http://openweathermap.org/img/wn/{{this.weatherData.icon}}@2x.png" alt="Weather icon" class="w-16 h-16">
+      <div class="ml-5">
+        <p class="text-xl">{{this.weatherData.temperature}}&deg;C</p>
+        <p class="capitalize">{{this.weatherData.description}}</p>
+      </div>
+    </div>
+    <ul class="mt-5">
+      <li>Humidity: {{this.weatherData.humidity}}%</li>
+      <li>Wind Speed: {{this.weatherData.windSpeed}} m/s</li>
+      <li>Pressure: {{this.weatherData.pressure}} hPa</li>
+    </ul>
+  </div>
+{{/if}}
+
+{{outlet}}

@@ -1,0 +1,43 @@
+Weather Dashboard API Integration Challenge
+Your task is to create a weather dashboard that fetches and displays the current
+weather and a 5-day forecast for a user-specified location. The application should use
+the OpenWeatherMap API to retrieve weather data.
+Requirements
+1. Create an input field where the user can enter a city name or ZIP/postal code to
+search for weather data.
+2. Display current weather information for the specified location, including:
+● City name
+● Current temperature
+● Weather description (e.g., clear sky, light rain)
+● Weather icon
+● Humidity
+● Wind speed
+● Pressure
+3. Display a 5-day forecast for the specified location, including:
+● Date
+● Average temperature
+● Weather description
+● Weather icon
+4. Handle potential errors, such as invalid input, API request failures, and data
+parsing issues.
+5. Implement a responsive design that works well on both desktop and mobile
+devices.
+API Reference
+Use the OpenWeatherMap API to fetch the required data. Sign up for a free API key at
+https://openweathermap.org/appid.
+Evaluation Criteria
+Your solution will be evaluated based on the following criteria:
+1. Correctness: The application should fetch and display accurate weather data
+according to the provided location.
+
+2. Code quality: The code should be well-structured, modular, and follow best
+practices.
+3. Error handling: The application should gracefully handle potential errors and edge
+cases.
+Notes
+● The entire problem must be solved with the aid of ChatGPT to assist with
+understanding the OpenWeatherMap API, troubleshooting issues, and exploring
+best practices for API integration and application development.
+● You can use any front-end framework or library you prefer, such as React,
+Angular, or Vue.js, or vanilla JavaScript. Bonus points for using Emberjs.
+● It is recommended that you use Tailwind CSS to streamline the design process.

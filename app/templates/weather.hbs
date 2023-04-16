@@ -1,20 +1,31 @@
 {{page-title "Weather"}}
-{{#if this.weatherData}}
-  <div class="mt-10">
-    <h2 class="text-2xl font-bold">{{this.weatherData.cityName}}</h2>
-    <div class="flex items-center">
-      <img src="http://openweathermap.org/img/wn/{{this.weatherData.icon}}@2x.png" alt="Weather icon" class="w-16 h-16">
-      <div class="ml-5">
-        <p class="text-xl">{{this.weatherData.temperature}}&deg;C</p>
-        <p class="capitalize">{{this.weatherData.description}}</p>
-      </div>
-    </div>
-    <ul class="mt-5">
-      <li>Humidity: {{this.weatherData.humidity}}%</li>
-      <li>Wind Speed: {{this.weatherData.windSpeed}} m/s</li>
-      <li>Pressure: {{this.weatherData.pressure}} hPa</li>
-    </ul>
-  </div>
-{{/if}}
 
-{{outlet}}
+<div class="container mx-auto mt-10">
+  <h1 class="text-4xl font-bold mb-5">Weather Dashboard</h1>
+
+  <form {{on "submit" this.searchWeather}}>
+    <input
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      type="text"
+      placeholder="Enter city name or ZIP/postal code"
+      {{on "input" this.updateQuery}}
+      value={{this.query}}
+    />
+  </form>
+
+  {{#if this.weatherData}}
+    <div class="mt-8">
+      <h2 class="text-2xl font-bold mb-2">{{this.weatherData.cityName}}</h2>
+      <div class="flex items-center">
+        <img src="https://openweathermap.org/img/wn/{{this.weatherData.icon}}@2x.png" alt="" class="w-12 h-12">
+        <p class="text-5xl font-bold ml-4">{{this.weatherData.temperature}}&deg;C</p>
+      </div>
+      <p class="capitalize">{{this.weatherData.description}}</p>
+      <p>Humidity: {{this.weatherData.humidity}}%</p>
+      <p>Wind Speed: {{this.weatherData.windSpeed}} m/s</p>
+      <p>Pressure: {{this.weatherData.pressure}} hPa</p>
+    </div>
+  {{/if}}
+
+  {{outlet}}
+</div>

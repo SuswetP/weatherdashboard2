@@ -3,7 +3,7 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const PostcssPlugins = [
   require('tailwindcss')(require('./tailwind.config.js')),
-  require('autoprefixer')
+  require('autoprefixer'),
 ];
 
 module.exports = function (defaults) {
